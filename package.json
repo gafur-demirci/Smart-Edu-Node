@@ -1,0 +1,22 @@
+{
+  "name": "smartedu",
+  "version": "1.0.0",
+  "description": "Smart Edu Portal with Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "backend",
+    "app",
+    "node.js"
+  ],
+  "author": "gafur demirci",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
