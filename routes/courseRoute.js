@@ -5,8 +5,9 @@ const router = express.Router();
 
 // routes
 
-router.route('/').post(courseController.createCourse);  // localhost:/courses/
-router.route('/').get(courseController.getAllCourses);
+router.route('/').post(courseController.createCourse);  // localhost:/courses/  (kurs ekleme)
+router.route('/').get(courseController.getAllCourses);  // localhost:/courses/  (kursları listeleme)
+router.route('/:slug').get(courseController.getCourse);   // localhost:/courses/id  (tekil kurs getirme)
 
 
 module.exports = router;
