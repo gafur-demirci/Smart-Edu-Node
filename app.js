@@ -27,11 +27,6 @@ app.use('/courses', courseRoute);
 app.use('/categories', categoryRoute);
 app.use('/users', userRoute);
 
-/* app.get('/about', pageComtroller.getAboutPage);
-app.get('/courses', pageComtroller.getCoursesPage);
-app.get('/dashboard', pageComtroller.getDashboardPage);
-app.get('/contact', pageComtroller.getContactPage); */
-
 const port = 3000;
 
 app.listen(port, () => {
