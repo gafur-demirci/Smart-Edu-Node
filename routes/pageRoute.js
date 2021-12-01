@@ -6,10 +6,10 @@ const router = express.Router();
 // routes
 
 router.route('/').get(pageController.getIndexPage);
-/* router.route('/about').get(pageController.getAboutPage);
-router.route('/courses').get(pageController.getCoursesPage);
+router.route('/about').get(pageController.getAboutPage);
 router.route('/dashboard').get(pageController.getDashboardPage);
-router.route('/contact').get(pageController.getContactPage); */
-
+router.route('/contact').get(pageController.getContactPage);
+router.route('/login').get(pageController.getLoginPage);
+router.route('/register').get(pageController.getRegisterPage);
 
 module.exports = router;

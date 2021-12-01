@@ -10,11 +10,11 @@ exports.getAboutPage = (req, res) => {
     });
 };
 
-exports.getCoursesPage = (req, res) => {
+/* exports.getCoursesPage = (req, res) => {
     res.status(200).render('courses', {
         page_name: 'courses',
     });
-};
+}; */
 
 exports.getDashboardPage = (req, res) => {
     res.status(200).render('dashboard', {
@@ -25,5 +25,17 @@ exports.getDashboardPage = (req, res) => {
 exports.getContactPage = (req, res) => {
     res.status(200).render('contact', {
         page_name: 'contact',
+    });
+};
+
+exports.getLoginPage = (req, res) => {
+    res.status(200).render('login', {
+        page_name: 'login',
+    });
+};
+
+exports.getRegisterPage = (req, res) => {
+    res.status(200).render('register', {
+        page_name: 'register',
     });
 };

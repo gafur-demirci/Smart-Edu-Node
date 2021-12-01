@@ -39,8 +39,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a
-                            class="hover-btn-new log orange mr-2"
-                            href="login.html"
+                            class="hover-btn-new log <%= page_name === 'login' && 'orange' %> mr-2"
+                            href="/login"
                             ><span
                                 ><i
                                     class="fa fa-sign-in"
@@ -49,7 +49,7 @@
                         ></a>
                     </li>
                     <li>
-                        <a class="hover-btn-new log orange" href="register.html"
+                        <a class="hover-btn-new log <%= page_name === 'register' && 'orange' %>" href="/register"
                             ><span
                                 ><i
                                     class="fa fa-user-plus"
