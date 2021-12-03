@@ -17,6 +17,9 @@
 							<img src="/images/blog_single.jpg" alt="" class="img-fluid">
 						</div>
 						<div class="post-content">
+
+							<% if (user && !(user.courses.includes(course._id))) { %>
+
 							<div class="post-date">
 								<form method="POST" action="/courses/enroll">
 									<input type="hidden" name="course_id" value="<%= course._id %>">
@@ -25,6 +28,8 @@
 									</button>
 								</form>
 							</div>
+
+							<% } %>
 
 							<div class="meta-info-blog">
 								<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
@@ -42,7 +47,7 @@
 					
 					<div class="blog-author">
 						<div class="author-bio">
-							<h3 class="author_name"><a href="#"><%= course.user %></a></h3>
+							<h3 class="author_name"><a href="#"><%= course.user.name %></a></h3>
 							<h5>CEO at <a href="#">SmartEDU</a></h5>
 							<p class="author_det">
 								Lorem ipsum dolor sit amet, consectetur adip, sed do eiusmod tempor incididunt  ut aut reiciendise voluptat maiores alias consequaturs aut perferendis doloribus omnis saperet docendi nec, eos ea alii molestiae aliquand.
@@ -62,10 +67,10 @@
 				<div class="col-lg-3 col-12 right-single">
 					<div class="widget-search">
 						<div class="site-search-area">
-							<form method="get" id="site-searchform" action="#">
+							<form method="GET" id="site-searchform" action="/courses">
 								<div>
-									<input class="input-text form-control" name="search-k" id="search-k" placeholder="Search keywords..." type="text">
-									<input id="searchsubmit" value="Search" type="submit">
+									<input class="input-text form-control" name="search" id="search-k" placeholder="Search..." type="text">
+									<button id="searchsubmit" value="Search" type="submit"></button>
 								</div>
 							</form>
 						</div>
