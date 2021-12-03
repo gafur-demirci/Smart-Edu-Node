@@ -10,6 +10,7 @@ const router = express.Router();
 router.route('/').post(roleMiddleware(['teacher', 'admin']), courseController.createCourse); // localhost:/courses/  (kurs ekleme)
 router.route('/').get(courseController.getAllCourses);                                       // localhost:/courses/  (kursları listeleme)
 router.route('/:slug').get(courseController.getCourse);                                      // localhost:/courses/id  (tekil kurs getirme)
+router.route('/:slug').delete(courseController.deleteCourse);                                   // localhost:/courses/slug?_method=DELETE (kurs silme)
 router.route('/enroll').post(courseController.enrollCourse);                                 // localhost:3000/courses/enroll
 router.route('/release').post(courseController.releaseCourse);                               // localhost:3000/courses/release
 
