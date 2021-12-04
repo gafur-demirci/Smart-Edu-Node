@@ -33,7 +33,7 @@ app.use(
         resave: false,
         saveUninitialized: true,
         store: MongoStore.create({
-            mongoUrl: 'mongodb://localhost/smart-edu-db',
+            mongoUrl: 'mongodb+srv://gafur:gafur_1905+@cluster0.boqok.mongodb.net/smart-edu-db?retryWrites=true&w=majority',
         }),
     })
 );
