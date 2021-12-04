@@ -38,19 +38,19 @@ const UserSchema = new Schema({
 // bunu niye yapıyoruz yukarıdaki kodda kullanıcı bir kursa kayıt olduğunda db de ki alan değiştiği (kurs eklendiği)
 // için mongoose kullanıcı şifresini tekrar hash ediyor ve kullanıcı bir daha sisteme giremiyordu
 
-UserSchema.pre('save', function (next) {
+UserSchema.pre('save', function(next) {
     const user = this;
-    if ( !user.isModified('pasword')) return next();
-
-    bcrypt.genSalt(10, function(err,salt) {
+    if (!user.isModified('password')) return next();
+  
+    bcrypt.genSalt(10, function(err, salt) {
         if (err) return next(err);
-        bcrypt.hash(user.password, salt, function(error, hash) {
-            if (error) return next(error);
+        bcrypt.hash(user.password, salt, function(err, hash) {
+            if (err) return next(err);
             user.password = hash;
             next();
         });
-    })
-});
+    });
+  });
 
 const User = mongoose.model('User', UserSchema);
 

@@ -23,7 +23,7 @@ exports.loginUser = (req, res) => {
     try {
         const { email, password } = req.body;
 
-        User.findOne({ email }, (err, user) => {
+        User.findOne({ email }, (err, user) => {         
             if (user) {
                 bcrypt.compare(password, user.password, (err, same) => {
                     if (same) {
@@ -34,7 +34,6 @@ exports.loginUser = (req, res) => {
                         req.flash('error', 'Your Password is not correct!');
                         res.status(400).redirect('/login');
                     }
-                        
                         
                 });
             } else {
