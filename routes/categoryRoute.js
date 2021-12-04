@@ -5,6 +5,7 @@ const router = express.Router();
 
 // Routes
 
-router.route('/').post(categoryController.createCategory); // localhost:/categories
+router.route('/').post(categoryController.createCategory);          // localhost:/categories
+router.route('/:id').delete(categoryController.deleteCategory);     // localhost:/categories/id
 
 module.exports = router;
