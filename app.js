@@ -12,7 +12,7 @@ const userRoute = require('./routes/userRoute');
 const app = express();
 
 // Connect Database
-mongoose.connect('mongodb://localhost/smart-edu-db').then(() => {
+mongoose.connect('mongodb+srv://gafur:gafur_1905+@cluster0.boqok.mongodb.net/smart-edu-db?retryWrites=true&w=majority').then(() => {
     console.log('db connected!');
 });
 
@@ -58,7 +58,7 @@ app.use('/courses', courseRoute);
 app.use('/categories', categoryRoute);
 app.use('/users', userRoute);
 
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
     console.log(`Sunucu ${port} portunda çalışıyor...`);
