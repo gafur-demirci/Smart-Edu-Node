@@ -396,12 +396,12 @@
 					<h2>Users</h2>
 					<table class="table">
 						<thead>
-						  <tr>
+						<tr>
 							<th scope="col">#ID</th>
 							<th scope="col">Email</th>
 							<th scope="col">Role</th>
 							<th scope="col">Delete</th>
-						  </tr>
+						</tr>
 						</thead>
 						<tbody>
 							<% for ( let i = 0; i < users.length; i++ ) { %>
@@ -417,9 +417,9 @@
 										</a>
 									</td>
 								</tr>
-						  <% } %>
+						<% } %>
 						</tbody>
-					  </table>
+					</table>
 					<!-- end col -->
 
 					<!-- end col -->
@@ -429,12 +429,12 @@
 					<h2>Categories</h2>
 					<table class="table">
 						<thead>
-						  <tr>
+						<tr>
 							<th scope="col">#ID</th>
 							<th scope="col">Name</th>
 							<th scope="col">Add</th>
 							<th scope="col">Delete</th>
-						  </tr>
+						</tr>
 						</thead>
 						<tbody>
 							<% for ( let i = 0; i < categories.length; i++ ) { %>
@@ -454,18 +454,18 @@
 										</a>
 									</td>
 								</tr>
-						  <% } %>
+							<% } %>
 						</tbody>
-					  </table>
-					<!-- end col -->
-
+					</table>
 					<!-- end col -->
 				</div>
-				<!-- end row -->
+					<!-- end col -->
 			</div>
+				<!-- end row -->
 			<!-- end container -->
 		</div>
 		<!-- end section -->
+		
 		<!-- ADD Modal -->
 		<div class="modal fade" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -515,4 +515,4 @@
 
 <% } %>
 
-  <%- include('partials/_footer') %>
+<%- include('partials/_footer') %>
